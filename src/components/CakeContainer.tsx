@@ -2,10 +2,14 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import cakesActions from "../redux/cake/CakesActions";
 
+interface AppState {
+  cakes: number;
+}
+
 const CakeContainer = () => {
-  const numOfCakes: any = useSelector((state) => state);
+  const numOfCakes: any = useSelector((state: AppState) => state.cakes);
   const dispatch = useDispatch();
-  const cakes = numOfCakes?.cakes.numOfCakes;
+  const cakes = numOfCakes?.numOfCakes;
   const buyCake = (cakes: any) => {
     dispatch(cakesActions());
   };

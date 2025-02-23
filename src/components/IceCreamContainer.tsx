@@ -1,11 +1,12 @@
-import React from "react";
-import iceCreamActions from "../redux/icecream/IceCreamAction";
 import { useDispatch, useSelector } from "react-redux";
-
+import iceCreamActions from "../redux/icecream/IceCreamAction";
+interface AppState {
+  iceCreams: number;
+}
 const IceCreamContainer = () => {
-  const numOfIceCreams: any = useSelector((state) => state);
+  const numOfIceCreams: any = useSelector((state: AppState) => state.iceCreams);
   const dispatch = useDispatch();
-  const iceCreams = numOfIceCreams.iceCreams.numOfIceCreams;
+  const iceCreams = numOfIceCreams?.numOfIceCreams;
   const buyIceCream = (iceCreams: any) => {
     dispatch(iceCreamActions());
   };
