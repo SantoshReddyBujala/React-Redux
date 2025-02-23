@@ -2,7 +2,7 @@ import * as type from "../cake/CakeTypes";
 const initialState = {
   numOfCakes: 10,
 };
-const CakeReducer = (state = initialState, action: any) => {
+const cakeReducer = (state = initialState, action: any) => {
   switch (action.type) {
     case type.BUY_CAKE:
       return {
@@ -14,4 +14,4 @@ const CakeReducer = (state = initialState, action: any) => {
   }
 };
 
-export default CakeReducer;
+export default cakeReducer;

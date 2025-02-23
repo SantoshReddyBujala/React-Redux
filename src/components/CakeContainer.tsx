@@ -1,13 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import CakesActions from "../redux/cake/CakesActions";
+import cakesActions from "../redux/cake/CakesActions";
 
 const CakeContainer = () => {
   const numOfCakes: any = useSelector((state) => state);
   const dispatch = useDispatch();
-  const cakes = numOfCakes.numOfCakes;
+  const cakes = numOfCakes?.cakes.numOfCakes;
   const buyCake = (cakes: any) => {
-    dispatch(CakesActions());
+    dispatch(cakesActions());
   };
   return (
     <>

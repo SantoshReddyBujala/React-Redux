@@ -1,9 +1,9 @@
 import * as type from "../cake/CakeTypes";
 
-const CakesActions = () => {
+const cakesActions = () => {
   return {
     type: type.BUY_CAKE,
   };
 };
 
-export default CakesActions;
+export default cakesActions;
