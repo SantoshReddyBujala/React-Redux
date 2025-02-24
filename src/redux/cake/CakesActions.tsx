@@ -1,8 +1,9 @@
 import * as type from "../cake/CakeTypes";
 
-const cakesActions = () => {
+const cakesActions = (numCakes = 1) => {
   return {
     type: type.BUY_CAKE,
+    payload: numCakes,
   };
 };
 
