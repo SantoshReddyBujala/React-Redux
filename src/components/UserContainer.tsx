@@ -1,7 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const UserContainer = () => {
-  return <div>Users</div>;
+  const users: any = useSelector((state) => state);
+
+  return (
+    <div>
+      <button onClick={() => {}}>Buy cake</button>
+    </div>
+  );
 };
 
 export default UserContainer;
